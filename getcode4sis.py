@@ -35,6 +35,7 @@ today = str(t.tm_year)+"-"+str(t.tm_mon)+"-"+str(t.tm_mday)
 
 
 def get_new_url():
+    "get the new url, update today"
     update_today = False
     req = urllib2.Request(forum_url)
     response = urllib2.urlopen(req)
@@ -73,6 +74,7 @@ def get_new_url():
 
 
 def get_new_code(new_url):
+    "get new code from new url"
     req = urllib2.Request(pre_url + new_url)
     response = urllib2.urlopen(req)
     the_page = response.read()
@@ -97,6 +99,7 @@ def get_new_code(new_url):
 
 
 def get_valid_code(codes):
+    "get valid code"
     valid_codes=[]
     if not codes:
         return
@@ -109,6 +112,7 @@ def get_valid_code(codes):
 
 
 def get_code():
+    "get code and send mail"
     new_url, update_today = get_new_url()
 
     if new_url:
