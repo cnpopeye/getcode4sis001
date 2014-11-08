@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+mailto_list=["abc@mail.com"]
+mail_host="smtp.xxx.com"
+mail_user="username"
+mail_pass="passwd"
+mail_postfix="mail.com"
